@@ -8,17 +8,21 @@ namespace Excercise_1 {
     public delegate double CalcDelegate(double val);
     // FunctionContainer has the indexer, that maps between the function and its implementation.
     public class FunctionsContainer {
+        // The members of the class.
         // A dictionary to map between the string and the delegate.
         private Dictionary<string, CalcDelegate> dictionary = new Dictionary<string, CalcDelegate>();
         // The indexer.
         public CalcDelegate this[string i] {
             // Get the item from the dictionary.
             get {
-                // We will return the default value if not found in the dictionary.
-                if (!(dictionary.ContainsKey(i))) {
+                // Return value if found in dictionary.
+                if (dictionary.ContainsKey(i)) {
+                    return dictionary[i];
+                }
+                // Otherwise return the default.
+                else {
                     return val => val;
                 }
-                return dictionary[i];
             }
             // Set the value of the item in the dictionary.
             set {

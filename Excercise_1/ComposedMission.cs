@@ -29,13 +29,13 @@ namespace Excercise_1 {
         // An Event of when a mission is activated
         public event EventHandler<double> OnCalculate;
         // Calculate the value of the complex function by using the elements in the list.
-        public double Calculate(double value) {
+        public double Calculate(double val) {
             foreach (CalcDelegate c in calcs) {
-                value = c(value);
+                val = c(val);
             }
             // Notify everyone.
-            OnCalculate?.Invoke(this, value);
-            return value;
+            OnCalculate?.Invoke(this, val);
+            return val;
         }
     }
 }
