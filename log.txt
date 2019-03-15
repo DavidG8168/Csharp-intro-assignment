@@ -1,0 +1,12 @@
+commit 326f7f2cb2d0129ef33363c4b9ad1b901c2dd84c (HEAD -> master, origin/master)
+Author: David Goichman <dudiduman@gmail.com>
+Date:   Fri Mar 15 16:09:54 2019 -0700
+
+    Add project files.
+
+commit 1cb249a001a1122f697984b4bfb530d726ad2dfc
+Author: David Goichman <dudiduman@gmail.com>
+Date:   Fri Mar 15 16:09:51 2019 -0700
+
+    Add .gitignore and .gitattributes.
+
