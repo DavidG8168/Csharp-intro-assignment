@@ -8,13 +8,13 @@ namespace Excercise_1 {
     public class SingleMission : IMission {
         // The members of the class.
         // We can store the function we need to calculate using a delegate.
-        private CalcDelegate calcDel;
+        private CalcDelegate CalcDel;
         // The class constructor.
-        // Contains the name, type and delegate.
+        // Contains the type, name and delegate.
         public SingleMission(CalcDelegate calcDel, string name) {
             this.Type = "Single";
             this.Name = name;
-            this.calcDel = calcDel;
+            this.CalcDel = calcDel;
         }
         // Property getters.
         // Get the mission name.
@@ -26,7 +26,7 @@ namespace Excercise_1 {
         // Calculates the value of the function.
         public double Calculate(double val) {
             // Calculate the value.
-            val = calcDel(val);
+            val = CalcDel(val);
             // Notify everyone.
             OnCalculate?.Invoke(this, val);
             return val;

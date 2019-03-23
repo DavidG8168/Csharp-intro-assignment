@@ -8,13 +8,12 @@ namespace Excercise_1 {
     public class ComposedMission : IMission {
         // The members of the class.
         // By using a linked list, we can store the delegates.
-        private LinkedList<CalcDelegate> calcs;
+        private LinkedList<CalcDelegate> calcs = new LinkedList<CalcDelegate>();
         // The class constructor.
+        // Contains the type and name.
         public ComposedMission(string name) {
             this.Type = "Composed";
             this.Name = name;
-            // Lists need to be initialized.
-            calcs = new LinkedList<CalcDelegate>();
         }
         // Property getters.
         // Get the mission name.
@@ -28,7 +27,7 @@ namespace Excercise_1 {
         }
         // An Event of when a mission is activated
         public event EventHandler<double> OnCalculate;
-        // Calculate the value of the complex function by using the elements in the list.
+        // Calculate the value of the composed mission function by using the elements in the list.
         public double Calculate(double val) {
             foreach (CalcDelegate c in calcs) {
                 val = c(val);

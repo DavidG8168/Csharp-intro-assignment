@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 // Main supplied by instructor.
-namespace Excercise_1{
+namespace Excercise_1 {
     class Program {
         public static void RunMissions(IList<IMission> missions, double val) {
             foreach (var m in missions) {
